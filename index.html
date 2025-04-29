@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSniff AI | Deepfake Detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <h1 class="logo-text">DeepSniff<span>AI</span></h1>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">How It Works</a>
+                <a href="https://simulationtechtutorial.blogspot.com/p/about-deepsniff-ai.html">About</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="hero-text">
+                    <h2>Advanced Deepfake Detection</h2>
+                    <p>Upload any image or video to analyze its authenticity using our state-of-the-art AI model</p>
+                </div>
+                <div class="upload-card">
+                    <div class="card-header">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Media Analyzer</h3>
+                    </div>
+                    <form id="uploadForm" class="upload-form">
+                        <div class="dropzone" id="dropZone">
+                            <input type="file" id="fileInput" accept="image/*, video/*" hidden>
+                            <div class="dropzone-content">
+                                <i class="fas fa-file-upload"></i>
+                                <p>Drag & drop files here or click to browse</p>
+                                <small>Supports: JPG, PNG, MP4 (Max 50MB)</small>
+                            </div>
+                        </div>
+                        <button type="submit" class="analyze-btn" id="analyzeBtn">
+                            <span class="btn-text">Analyze Now</span>
+                            <i class="fas fa-spinner fa-spin loading-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="results-section" id="resultsSection">
+                <div class="results-container">
+                    <div class="media-preview" id="previewContainer">
+                        <div id="previewPlaceholder">
+                            <i class="fas fa-image"></i>
+                            <p>Preview will appear here</p>
+                        </div>
+                        <div id="previewContent"></div>
+                    </div>
+                    <div class="analysis-results" id="resultsContainer">
+                        <div class="results-header">
+                            <h3>Analysis Results</h3>
+                            <div class="confidence-meter">
+                                <div class="meter-track">
+                                    <div class="meter-progress" id="confidenceMeter"></div>
+                                </div>
+                                <span id="confidenceValue">0%</span>
+                            </div>
+                        </div>
+                        <div class="verdict-box" id="verdictBox">
+                            <div class="verdict-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h4 id="verdictText">Awaiting Analysis</h4>
+                            <p id="confidenceText">Upload media to begin detection</p>
+                        </div>
+                        <div class="details-box">
+                            <div class="detail-item">
+                                <span>Model:</span>
+                                <span>Truthframe-D2</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Accuracy:</span>
+                                <span>92.4%</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Processing Time:</span>
+                                <span id="processingTime">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>How Our Detection Works</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Advanced AI Model</h3>
+                        <p>Our system uses a deep learning model trained on thousands of real and synthetic media samples.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <h3>Detailed Analysis</h3>
+                        <p>Examines subtle artifacts in facial features, lighting, and textures that often reveal manipulations.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Get results in seconds with our optimized detection pipeline.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <i class="fas fa-shield-alt logo-icon"></i>
+                        <h1 class="logo-text">DeepSniff<span>AI</span></h1>
+                    </div>
+                    <p>Advanced media authentication powered by AI</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://simulationtechtutorial.blogspot.com/p/privacy-policy_29.html">Privacy Policy</a>
+                    <a href="https://simulationtechtutorial.blogspot.com/p/terms-and-conditions-effective-date.html">Terms of Service</a>
+                    <a href="https://simulationtechtutorial.blogspot.com/p/contact-us_29.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 DeepSniff AI. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
