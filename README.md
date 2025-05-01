@@ -45,7 +45,7 @@ deepfake-detector/
 
 Language. **Use  Python 3.10**
    ```bash
-  [ https://www.python.org/downloads/release/python-3100/](https://www.python.org/downloads/release/python-3100/)
+  [ https://www.python.org/downloads/release/python-3100/]
    ```
 1. **Clone the repository**
    ```bash
