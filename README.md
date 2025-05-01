@@ -7,11 +7,10 @@ A web application that detects deepfake images using a deep learning model train
 
 ## 🚀 Features
 
-- Upload and analyze images (JPG, PNG, JPEG, WEBP)
+- Upload and analyze images (JPG, PNG, JPEG)
 - EfficientNetB4-based deepfake detection
 - Real-time prediction results
 - Responsive frontend using HTML + CSS (Flask templating)
-- Includes pages: Home, About, Privacy Policy, Terms, Contact
 
 ---
 
@@ -27,46 +26,47 @@ A web application that detects deepfake images using a deep learning model train
 ## 📁 Project Structure
 
 ```
-deepfake_webapp/
-│
-├── app.py                   # Main Flask application
-├── best_model_b4.h5         # Trained model file
+deepfake-detector/
 ├── static/
-│   └── style.css            # CSS styles
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── uploads/ (empty)
 ├── templates/
-│   ├── index.html           # Home page
-│   ├── result.html          # Results page
-│   ├── about.html           # About us
-│   ├── privacy.html         # Privacy policy
-│   ├── terms.html           # Terms & conditions
-│   └── contact.html         # Contact page
-├── uploads/                 # Folder for uploaded files
-│   └── (empty initially)
-├── requirements.txt         # Python dependencies
-└── README.md                # This file
+│   └── index.html
+├── app.py
+└── requirements.txt
 ```
 
 ---
 
 ## 💻 Setup Instructions
 
+Language. **Use  Python 3.10**
+   ```bash
+  [ https://www.python.org/downloads/release/python-3100/](https://www.python.org/downloads/release/python-3100/)
+   ```
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/deepfake_webapp.git
    cd deepfake_webapp
    ```
-
-2. **Install dependencies**
+2. **Create Virtual Environment**
    ```bash
-   pip install -r requirements.txt
+   python -m venv venv
+   ```
+3. **Install dependencies**
+   ```bash
+   pip install flask tensorflow opencv-python pillow numpy
    ```
 
-3. **Run the application**
+4. **Run the application**
    ```bash
    python app.py
    ```
 
-4. **Access the app**  
+5. **Access the app**  
    Open a browser and go to:  
    [[http://127.0.0.1:5000](http://localhost:5000)
 
@@ -94,4 +94,4 @@ This app is for academic and research purposes only. Not intended for commercial
 
 ## 📬 Contact
 
-For queries, reach out via the **Contact Us** page on the web app or email the contributors directly.
+For queries, email the contributors directly.
