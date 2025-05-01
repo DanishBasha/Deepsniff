@@ -30,11 +30,11 @@ deepfake-detector/
 ├── static/
 │   ├── css/
 │   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── uploads/ (empty)
+│   └── js/
+│       └── script.js
 ├── templates/
 │   └── index.html
+├── best_model_b4.h5  # Model file in root directory
 ├── app.py
 └── requirements.txt
 ```
